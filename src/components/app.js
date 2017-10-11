@@ -8,7 +8,7 @@ import Footer from './footer';
 export default class App extends Component {
 
   render() {
-    console.log('app ',this.props);
+    //console.log('app ',this.props);
     return (
       <div>
           <Navigation props={this.props}/>

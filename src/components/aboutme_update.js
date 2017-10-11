@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
-//import { sendEmail } from '../actions/index';
+import { updateAboutme } from '../actions/index';
 import FormField from './form_field';
 
 class AboutmeUpdate extends Component {
@@ -54,7 +54,7 @@ class AboutmeUpdate extends Component {
         <div className="row">
           <div className="col-lg-8 mx-auto">
             
-            <form name="AboutMeUpdateForm" id="AboutMeUpdateForm" onSubmit={handleSubmit(this.props.sendEmail)}>
+            <form name="AboutMeUpdateForm" id="AboutMeUpdateForm" onSubmit={handleSubmit(this.props.updateAboutme)}>
               {this.getFormField(this.props)}
               <br/>
 
@@ -99,4 +99,4 @@ export default reduxForm({
    form: 'AboutMeUpdateForm',
    fields: ['description','excerpt'],
    validate
-},mapStateToProps,null)(AboutmeUpdate);
+},mapStateToProps,{updateAboutme})(AboutmeUpdate);

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {ROOT_URL} from '../config';
+import {queryString} from '../config';
 
 export const FETCH_BLOG = 'FETCH_BLOG';
 export const FETCH_SINGLE_BLOG = 'FETCH_SINGLE_BLOG';
@@ -10,8 +11,6 @@ export const UPDATE_BLOG = 'UPDATE_BLOG';
 const ROOT_URL_BLOG = `${ROOT_URL}/blog`;
 const ROOT_URL_BLOG_CATEGORIES = `${ROOT_URL}/categories`;
 const ROOT_URL_UPDATE = `${ROOT_URL}/updateblog`;
-
-const queryString = require('query-string');
 
 export function fetchBlog(start,limit) {
     

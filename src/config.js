@@ -14,3 +14,5 @@ function get_current_date(){
 
    return  currentdate.getFullYear() + "-" + month + "-" + day;
 }
+
+export const queryString = require('query-string');

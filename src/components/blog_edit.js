@@ -170,6 +170,7 @@ class BlogEdit extends Component {
                       name="btitle"
                       placeholder=""
                       {...btitle}
+                     
                     />
                     <p className="help-block text-danger">
                       {btitle.touched ? btitle.error : ""}

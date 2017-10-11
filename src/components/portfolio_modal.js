@@ -3,20 +3,19 @@ import { Link } from 'react-router';
 import {is_logged_in} from '../config';
 import PortfolioContentView from './portfolio_content_view';
 import PortfolioContentEdit from './portfolio_content_edit';
+
 var content = '';
 class PortfolioModal extends Component {
-//const PortfolioModal = ({ project,props }) => {
-  //console.log('modal ',is_logged_in);
+
   constructor(props) {
     super(props);
-    //console.log('modal ',props);
+    
   }
   render() {
-    //console.log('modal render ',this.props.project);
-    if(is_logged_in) {
-      var content = <PortfolioContentEdit  project={this.props} />
+    
+    if(is_logged_in.login == true) {
+      var content = <PortfolioContentEdit  project={this.props}/>
     } else {
-     
       var content = <PortfolioContentView project={this.props.project} />
     }
     return (
